@@ -5,9 +5,9 @@
         <meta name="description" content="wolfgang fizzのwebポートフォリオ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-              section.data2{
-                padding: 30px;
-                padding-top: 180px;
+              .top{
+                display: flex;
+                gap: 20px;
             }
               .size1{
                 font-weight: bold;
@@ -20,6 +20,13 @@
                 width: 100%;
                 background-color:aliceblue;
               }
+              .data2{
+                padding:150px 40px;
+                
+              }
+              h2{
+                 scroll-margin-top: 180px;
+              }
         </style>
     </head>
 
@@ -27,21 +34,15 @@
         <main>
             <article class="data1">
             <h1>初めましてWolfgang Fizzと申します。</h1>
-            <p>
-                <a href="https://github.com/miyongmeixiao-hue">Github</a>はこちらから。
-            </p>
-            </article>
+            <p><a href="https://github.com/miyongmeixiao-hue">Github</a>はこちらから。</p>
             <hr>
-            <section class="data2">
-            <nav>
-                <h2>目次</h2>
-                <ul>
-                    <li><a href="#profile">プロフィール</a></li>
-                    <li><a href="#skills">スキル</a></li>
-                    <li><a href="#works">作品</a></li>
-                </ul>
-
+            <nav class="top">
+                <a href="#profile">プロフィール</a>
+                <a href="#skills">スキル</a>
+                <a href="#works">作品</a>
             </nav>
+            </article>
+            <article class="data2">
             <h2 id="profile">プロフィール</h2>
             <p><time datetime="2026-09-09">現在</time><span class="size1">Python3とHTMLを独学で学習しています。</span>実際にコードを書きながら学ぶことを重視しており、エラーが発生した際には、エラーメッセージや教材，生成AIなどを活用して原因を調べ、自分で解決することを意識しています。また、IT分野に進もうと思った理由につきましては、イラスト制作を通して視線誘導や色彩などを勉強していくうちに、
             実際に動く作品も自分で作ってみたいと思ったのが理由です。</p>　
@@ -80,7 +81,7 @@
                     </ul>
                 </li>
             </ul>
-            </section>
+        </article>
             <h2 id="works">作品</h2>
             <img src="イラスト画像/original-FC5E1184-1E43-4C8B-9299-564BD166B757%20-%20コピー.jpeg"
      alt="Wolfgang Fizzのイラスト">
@@ -92,3 +93,4 @@
         </main>
     </body>
 </html>
+
