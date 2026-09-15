@@ -103,7 +103,31 @@
                 </div>
             </article>
         </div>
+        <hr>
             <h2 id="works">作品</h2>
+            <table><b>簡単な計算機</b>　　CSS(table)とJSの計算処理を組み合わせて作成しています。
+                <tr>
+                    <th>個数</th>
+                    <th>値段</th>
+                    <th>合計金額</th>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="個数" id="quantity"></td>
+                    <td><input type="number" placeholder="値段" id="price"></td>
+                    <td id="total">円</td>
+                </tr>
+            </table>
+            <button id="calculate">計算を実行する</button>
+            <!-- JavaScript コード-->
+             <script>
+                document.getElementById("calculate").addEventListener("click",function(){
+                var quantity = document.getElementById("quantity").value;
+                var price = document.getElementById("price").value;
+                var total= quantity * price;
+                document.getElementById("total").textContent = total;
+                });
+             </script>
+             <hr>
             <img src="イラスト画像/original-FC5E1184-1E43-4C8B-9299-564BD166B757%20-%20コピー.jpeg"
      alt="Wolfgang Fizzのイラスト">
             
@@ -114,3 +138,4 @@
         </main>
     </body>
 </html>
+
