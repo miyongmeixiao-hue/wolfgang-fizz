@@ -2,43 +2,48 @@
 <html lang="ja">
     <!--スマホとのレスポンスの確認をする-->
 
+    <!-- CSS。後で外部CSSにする -->
     <head>
         <meta charset="UTF-8">
         <title>Wolfgang Fizz｜Web Portfolio</title>
         <meta name="description" content="wolfgang fizzのwebポートフォリオ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-              .top{
-                display: flex;
-                gap: 20px;
-              }
-              .top a:hover {
-                color: blue;
-             }
-              .size1{
-                font-weight: bold;
-              }  
-              .data1{
+            /* ヘッダー部分 */
+            header{
                 padding: 0px 20px;
                 position:fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
                 background-color:rgb(255, 255, 255);
-                border-bottom: solid 0.5px #f1f1f1;
-              }
-              .data2{
-                padding:150px 40px;
+                border-bottom: solid 0.5px #000000;
+            }
+            nav{
+                display: flex;
+                gap: 20px;
                 
-              }
-              h2{
-                 scroll-margin-top: 180px;
-              }
-              .section {
+            }
+            nav a:hover {
+                color: blue;
+            }
+            nav a{
+                text-decoration: none;
+            }
+            
+            article{
+                padding:150px 0px 0px;
+            }
+            /*かぶり防止*/
+            h2{
+                scroll-margin-top: 180px;
+            }
+            .section {
                 display: grid;
                 grid-template-columns: 150px 1fr;
                 gap: 40px;
-              }
+            }
+            /*確率計算機の部分(もう少し付け足す）*/
               .table{
                width: fit-content;
                margin: 0 auto;
@@ -46,24 +51,24 @@
         </style>
     </head>
 
+    <!--HTML-->
     <body>
         <!--ヘッダー部分-->
         <header>
-            <article >
-            <div class="data1">
+            <!-- 今後変更する予定がないため、直接指定しています -->
+            <div style="font-weight: bold;">
                 <h1>Wolfgang Fizz｜Web Portfolio</h1>
-                <nav class="top">
+                <nav>
                     <a href="#profile">プロフィール</a>
                     <a href="#skills">スキル</a>
                     <a href="#works">作品</a>
                     <a href="https://github.com/miyongmeixiao-hue">GitHub</a>
                 </nav>
             </div>
-            </article>
         </header>
-        <!--解説内容１--><!--自己紹介終了-->
+
         <div>
-            <article class="data2">
+            <article>
                 <div class="section">
                     <h2 id="profile">プロフィール</h2>
                     <div>
@@ -87,7 +92,6 @@
                     </div>
                 </div>
             <hr>
-            <!--解説内容2-->
                 <div class="section">
                     <h2 id="skills">スキル</h2>
                     <div>
@@ -118,13 +122,13 @@
                     </ul>
                     </div>
                 </div>
+            <hr>
             </article>
         </div>
-        <hr>
             <!--自己紹介終了-->
             <h2 id="works">作品</h2>
-            <article class="table">
-                <h3>ゲームガチャの排出率の計算（HTML・CSS・JavaScriptを使用）</h3>
+            <main class="table">
+                <h3>ゲームガチャの排出率の計算（HTML・JavaScriptを使用）</h3>
                 <p>「少なくとも一回は排出される確率」を計算するツールです。小数点以下の2桁まで表示して、3桁目は四捨五入されます。</p>
                 <table>
                     <tr>
@@ -139,7 +143,6 @@
                     </tr>
                 </table>
                 <button id="calculate">計算を実行する</button>
-            </article>
             <!-- JavaScript コード-->
              <script>
                 document.getElementById("calculate").addEventListener("click",function(){
@@ -149,13 +152,13 @@
                 document.getElementById("total").textContent = (total * 100).toFixed(2) + "%";
                 });
              </script>
-             <hr>
-             <!--end-->
-            <img src="イラスト画像/original-FC5E1184-1E43-4C8B-9299-564BD166B757%20-%20コピー.jpeg"
+             <!--用途がないためコメントアウト-->
+            <!--<img src="イラスト画像/original-FC5E1184-1E43-4C8B-9299-564BD166B757%20-%20コピー.jpeg"
      alt="Wolfgang Fizzのイラスト">
             
             <footer>
                 <p><small>&copy; 2026 Wolfgang Fizzサンプル用です。</small></p>
-            </footer>
+            </footer>-->
     </body>
 </html>
+
