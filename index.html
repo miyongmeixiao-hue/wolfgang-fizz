@@ -38,14 +38,21 @@
                 gap:10px;
             }
             nav{
-                color:#F5F7FF;
+                margin-left: 240px;
+                gap: 20px;
+                display: flex;
             }
             
             nav a{
                 text-decoration: none;
+                color:#F5F7FF;
+            }
+            nav a:hover{
+                color: #565eac;
             }
             .at1{
                 margin-left:50px;
+                background-image: url("images/wolf 1.png");
             }
             .at1 h1{
                 font-size: 50px;
@@ -62,6 +69,11 @@
                 text-decoration: none;
                 color: black;
               
+            }
+            #works{
+                text-align: center;
+                border-bottom: solid 0.5px #565eac;
+                padding-bottom: 20px;
             }
             
             article{
@@ -89,10 +101,11 @@
                 background-color: #565eac;
             }
             /*確率計算機の部分(もう少し付け足す）*/
-              .table{
+            .table{
                width: fit-content;
                margin: 0 auto;
-              }
+            }
+
         </style>
     </head>
 
@@ -117,7 +130,7 @@
             <hr>
             <article class="at1">
                 <h1> Wolfgang Fizz </h1>
-                <p>Web Engineer / Front-end Engineer</p>
+                <p>Aspiring Web Engineer / Front-end Engineer</p>
                 <br>
                 <p><a href="#works"id="view-works">View Works</a></p>
                 <br>
@@ -127,8 +140,6 @@
                     <p><small>&copy; 2026 Wolfgang Fizz.ビジュアル用イラスト</small></p>
                 </footer>
             </article>
-            
-
                 <div class="section">
                     <h2 id="profile">プロフィール</h2>
                     <div>
@@ -152,9 +163,10 @@
                             今後はHTML・CSS・JavaScriptとの連携や、データベースを利用したWebアプリケーションの制作にも挑戦していきたいと考えています。</p>
                     </div>
                 </div>
-        
-            <hr>
-            <div class="skills-boxes">
+                <br>
+                <br>
+                <br>
+            <div class="skills-boxes" id="skills">
                 <div class="skill-box">
                     <h3>Programming / Markup</h3>
                     <p>
@@ -182,9 +194,6 @@
                 </div>
             </div>
        
- 
-            <hr>
-            </article>
             <!--自己紹介終了-->
             <h2 id="works">作品</h2>
             <main class="table">
@@ -197,18 +206,19 @@
                         <th>結果</th>
                     </tr>
                     <tr>
-                        <td><input type="number" placeholder="排出率" id="quantity"></td>
-                        <td><input type="number" placeholder="試行回数" id="price"></td>
+                        <td><input type="number" placeholder="排出率" id="probability"></td>
+                        <td><input type="number" placeholder="試行回数" id="trials"></td>
                         <td id="total">％</td>
                     </tr>
                 </table>
                 <button id="calculate">計算を実行する</button>
+            </main>
             <!-- JavaScript コード-->
              <script>
                 document.getElementById("calculate").addEventListener("click",function(){
-                var quantity = document.getElementById("quantity").value;
-                var price = document.getElementById("price").value;
-                var total= 1-(1-(quantity/100)) ** price;
+                var probability = document.getElementById("probability").value;
+                var trials = document.getElementById("trials").value;
+                var total= 1-(1-(probability/100)) ** trials;
                 document.getElementById("total").textContent = (total * 100).toFixed(2) + "%";
                 });
              </script>
@@ -222,4 +232,3 @@
             </footer>-->
     </body>
 </html>
-
