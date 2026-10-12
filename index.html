@@ -98,6 +98,9 @@
                 padding: 20px;
                 background-color: #565eac;
             }
+            #total{
+                padding:20px
+            }
 
         </style>
     </head>
@@ -190,7 +193,7 @@
             <h2 id="works">作品</h2>
             <main class="table">
                 <h1>ゲームガチャの排出率の計算（HTML・JavaScriptを使用）</h1>
-                <p>「少なくとも一回は排出される確率」を計算するツールです。小数点以下の2桁まで表示して、3桁目は四捨五入されます。</p>
+                <p>「少なくとも一回は排出される確率」を計算するツールです。小数点以下は表示していません。</p>
                 <table>
                     <tr>
                         <th>排出率％</th>
@@ -205,13 +208,14 @@
                 </table>
                 <button id="calculate">計算を実行する</button>
             </main>
+
             <!-- JavaScript コード-->
              <script>
                 document.getElementById("calculate").addEventListener("click",function(){
                 var probability = document.getElementById("probability").value;
                 var trials = document.getElementById("trials").value;
                 var total= 1-(1-(probability/100)) ** trials;
-                document.getElementById("total").textContent = (total * 100).toFixed(2) + "%";
+                document.getElementById("total").textContent = (total * 100).toFixed(0) + "%";
                 });
              </script>
              <br>
